@@ -16,9 +16,9 @@ class App < Sinatra::Base
       @bios = []
       @team_members = params[:team][:members]
       @team_members.each do |tm|
-        @names << tm.name
-        @powers << tm.power
-        @bios << tm.bio
+        @names << tm[:name]
+        @powers << tm[:power]
+        @bios << tm[:bio]
       end
       erb :team
     end
