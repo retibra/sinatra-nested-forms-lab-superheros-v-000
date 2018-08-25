@@ -18,7 +18,7 @@ class App < Sinatra::Base
       @team_members.each do |tm|
         @names << tm.name
         @powers << tm.power
-        @bios << tm.bios
+        @bios << tm.bio
       end
       erb :team
     end
